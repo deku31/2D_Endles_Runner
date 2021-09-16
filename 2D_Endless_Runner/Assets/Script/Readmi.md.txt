@@ -1,1 +1,10 @@
 game 2d_endles_runner
+
+nama : deri kurniawan
+nim : 8020190351
+universitas dinamika bangsa
+# fitur yang ditambahkan
+- audio highligh
+- pause/play
+-pause screen
+- start screen

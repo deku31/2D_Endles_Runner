@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class start : MonoBehaviour
 {
+    // start screen
     public script scr;
     private void Start()
     {

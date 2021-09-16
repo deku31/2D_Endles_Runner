@@ -9,7 +9,9 @@ public class CharSoundControll : MonoBehaviour
     //HIghlight
     public AudioClip scoreHighlight;
     private Animator anim;
+    // audio highligh
     private bool hl;
+
 
     private AudioSource audioPlayer;
 
@@ -38,6 +40,7 @@ public class CharSoundControll : MonoBehaviour
     public void PlayScoreHighlight()
     {
         audioPlayer.PlayOneShot(scoreHighlight);
+       
         hl = true;
     }
 }

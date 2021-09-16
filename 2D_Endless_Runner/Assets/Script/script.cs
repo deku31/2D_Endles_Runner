@@ -37,10 +37,12 @@ public class script : MonoBehaviour
 
     private float lastPositionX;
 
-    [Header("Start Panel")]
+   //panel start
+   [Header("Start Panel")]
     public bool start;
     public GameObject startPanel;
 
+    //panel pause
     [Header("pause")]
     public GameObject btnpause;
     public GameObject panelpause;
@@ -137,6 +139,7 @@ public class script : MonoBehaviour
         velocityVector.x = Mathf.Clamp(velocityVector.x + moveAccel * Time.deltaTime, 0.0f, maxSpeed);
         rig.velocity = velocityVector;
     }
+    // start controll
     private void GameStart() 
     {
         if (start==true)
@@ -147,7 +150,7 @@ public class script : MonoBehaviour
             btnpause.SetActive(false);
         }
     }
-
+    // pause controll
     public void gamePause() 
     {
         //agar tidak bergerak
@@ -159,6 +162,7 @@ public class script : MonoBehaviour
 
         panelpause.SetActive(true);
     }
+    //resume controll
     public void gameResume() 
     {
         //agar tidak bergerak
@@ -169,6 +173,7 @@ public class script : MonoBehaviour
         //menghilangkan panel pause
         panelpause.SetActive(false);
     }
+
     private void GameOver()
     {
         // set high score
