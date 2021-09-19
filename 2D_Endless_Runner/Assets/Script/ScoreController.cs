@@ -22,7 +22,7 @@ public class ScoreController : MonoBehaviour
     {
         return currentScore;
     }
-
+  
     public void IncreaseCurrentScore(int increment)
     {
         currentScore += increment;
@@ -31,7 +31,6 @@ public class ScoreController : MonoBehaviour
         {
             lastScoreHighlight += scoreHighlightRange;
             sound.PlayScoreHighlight();
-
         }
     }
     public void FinishScoring()

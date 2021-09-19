@@ -7,11 +7,11 @@ public class CharSoundControll : MonoBehaviour
     //jump sound
     public AudioClip jump;
     //HIghlight
-    public AudioClip scoreHighlight;
-    private Animator anim;
     // audio highligh
+    public AudioClip scoreHighlight;
+    //anim higliht
+    private Animator anim;
     private bool hl;
-
 
     private AudioSource audioPlayer;
 
@@ -20,9 +20,10 @@ public class CharSoundControll : MonoBehaviour
         anim = GetComponent<Animator>();
         audioPlayer = GetComponent<AudioSource>();
     }
+    //anim play
     private void Update()
     {
-        if (hl==true)
+        if (hl == true)
         {
             anim.SetBool("HIghlight", true);
             hl = false;
@@ -40,7 +41,6 @@ public class CharSoundControll : MonoBehaviour
     public void PlayScoreHighlight()
     {
         audioPlayer.PlayOneShot(scoreHighlight);
-       
         hl = true;
     }
 }
